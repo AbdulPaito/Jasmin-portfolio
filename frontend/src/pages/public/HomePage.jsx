@@ -206,7 +206,11 @@ const HomePage = () => {
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <div className="relative">
                 <div className="w-full max-w-sm mx-auto aspect-square lg:aspect-[4/5] bg-gradient-to-br from-light-gray to-emerald/5 rounded-[2.5rem] flex items-center justify-center border border-gray-100 overflow-hidden shadow-2xl shadow-navy/10">
-                  {settings?.profileImage ? (
+                  {loading ? (
+                    <div className="w-full h-full flex items-center justify-center bg-gray-50/50">
+                      <div className="w-12 h-12 border-4 border-emerald/20 border-t-emerald rounded-full animate-spin" />
+                    </div>
+                  ) : settings?.profileImage ? (
                     <img src={settings.profileImage} alt="Jasmin Paito" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" />
                   ) : (
                     <div className="text-center p-8">
