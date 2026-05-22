@@ -88,7 +88,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
-                  <Link to={link.path} className="text-gray-400 hover:text-emerald transition-colors flex items-center gap-2 text-sm group">
+                  <Link to={link.path} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-400 hover:text-emerald transition-colors flex items-center gap-2 text-sm group">
                     <FiArrowRight className="text-xs text-emerald/40 group-hover:text-emerald group-hover:translate-x-1 transition-all" />
                     {link.name}
                   </Link>
@@ -103,7 +103,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <Link to="/services" className="text-gray-400 hover:text-emerald transition-colors flex items-center gap-2 text-sm group">
+                  <Link to="/services" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-400 hover:text-emerald transition-colors flex items-center gap-2 text-sm group">
                     <FiArrowRight className="text-xs text-emerald/40 group-hover:text-emerald group-hover:translate-x-1 transition-all" />
                     {service}
                   </Link>
