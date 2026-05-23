@@ -27,7 +27,7 @@ const DashboardLayout = () => {
   return (
     <div className="min-h-screen bg-light-gray flex">
       {/* Sidebar */}
-      <aside className={`fixed lg:sticky top-0 h-screen inset-y-0 left-0 z-50 w-[260px] bg-navy transform transition-transform duration-300 ${
+      <aside className={`fixed top-0 h-screen inset-y-0 left-0 z-50 w-[260px] bg-navy transform transition-transform duration-300 ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       }`}>
         <div className="flex flex-col h-full">
@@ -97,7 +97,7 @@ const DashboardLayout = () => {
       {sidebarOpen && <div onClick={() => setSidebarOpen(false)} className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden" />}
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col min-h-screen">
+      <div className="flex-1 flex flex-col min-h-screen lg:ml-[260px]">
         {/* Top Bar */}
         <header className="bg-white border-b border-gray-100 px-6 lg:px-8 h-16 flex items-center justify-between sticky top-0 z-30 shadow-sm">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="lg:hidden p-2 text-navy hover:bg-gray-100 rounded-lg transition-colors" aria-label="Toggle sidebar">
