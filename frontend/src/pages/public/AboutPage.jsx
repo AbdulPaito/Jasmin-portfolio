@@ -88,7 +88,7 @@ const AboutPage = () => {
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald text-white border border-emerald hover:bg-emerald-dark font-semibold transition-all duration-300 shadow-sm hover:-translate-y-1">
                         <FiFileText size={18} /> View Resume
                       </a>
-                      <a href={getResumeDownloadUrl(about.resumeUrl)} download="Jasmin_Paito_Resume.pdf" target="_blank" rel="noopener noreferrer" 
+                      <a href={getResumeDownloadUrl(about.resumeUrl)} download target="_blank" rel="noopener noreferrer" 
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald/10 text-emerald border border-emerald/20 hover:bg-emerald hover:text-white font-semibold transition-all duration-300 shadow-sm hover:shadow-emerald/25 hover:-translate-y-1">
                         <FiFileText size={18} /> Download Resume
                       </a>

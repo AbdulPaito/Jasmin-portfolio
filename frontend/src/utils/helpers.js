@@ -20,18 +20,13 @@ export const getInitials = (name) => {
 
 export const getResumeViewUrl = (url) => {
   if (!url) return '';
-  if (url.includes('cloudinary.com')) {
-    return url.replace(/\.[^/.]+$/, ".pdf");
-  }
   return url;
 };
 
 export const getResumeDownloadUrl = (url) => {
   if (!url) return '';
   if (url.includes('cloudinary.com')) {
-    let newUrl = url.replace('/upload/', '/upload/fl_attachment/');
-    newUrl = newUrl.replace(/\.[^/.]+$/, ".pdf");
-    return newUrl;
+    return url.replace('/upload/', '/upload/fl_attachment/');
   }
   return url;
 };

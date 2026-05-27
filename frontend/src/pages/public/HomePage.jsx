@@ -112,7 +112,7 @@ const HomePage = () => {
                     <a href={getResumeViewUrl(about.resumeUrl)} target="_blank" rel="noopener noreferrer" className="btn-secondary text-base flex items-center gap-2">
                       <FiFileText /> View Resume
                     </a>
-                    <a href={getResumeDownloadUrl(about.resumeUrl)} download="Jasmin_Paito_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-secondary text-base flex items-center gap-2 bg-white/[0.05] border-white/10 hover:bg-emerald hover:border-emerald hover:text-white">
+                    <a href={getResumeDownloadUrl(about.resumeUrl)} download target="_blank" rel="noopener noreferrer" className="btn-secondary text-base flex items-center gap-2 bg-white/[0.05] border-white/10 hover:bg-emerald hover:border-emerald hover:text-white">
                       <FiFileText /> Download
                     </a>
                   </>
