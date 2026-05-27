@@ -17,3 +17,21 @@ export const getInitials = (name) => {
   if (!name) return '?';
   return name.split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2);
 };
+
+export const getResumeViewUrl = (url) => {
+  if (!url) return '';
+  if (url.includes('cloudinary.com')) {
+    return url.replace(/\.[^/.]+$/, ".pdf");
+  }
+  return url;
+};
+
+export const getResumeDownloadUrl = (url) => {
+  if (!url) return '';
+  if (url.includes('cloudinary.com')) {
+    let newUrl = url.replace('/upload/', '/upload/fl_attachment/');
+    newUrl = newUrl.replace(/\.[^/.]+$/, ".pdf");
+    return newUrl;
+  }
+  return url;
+};

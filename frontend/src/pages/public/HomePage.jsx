@@ -12,7 +12,7 @@ import { getBlogs } from '../../services/blogService';
 import { getTestimonials } from '../../services/testimonialService';
 import { getAbout } from '../../services/aboutService';
 import { formatDate } from '../../utils/formatDate';
-import { truncateText, getInitials } from '../../utils/helpers';
+import { truncateText, getInitials, getResumeViewUrl, getResumeDownloadUrl } from '../../utils/helpers';
 
 const iconMap = { FiFileText, FiBook, FiDollarSign, FiClipboard, FiBarChart2, FiUsers, FiSearch, FiBriefcase };
 
@@ -108,9 +108,14 @@ const HomePage = () => {
                   Get In Touch
                 </Link>
                 {about?.resumeUrl && (
-                  <a href={about.resumeUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary text-base flex items-center gap-2">
-                    <FiFileText /> View Resume
-                  </a>
+                  <>
+                    <a href={getResumeViewUrl(about.resumeUrl)} target="_blank" rel="noopener noreferrer" className="btn-secondary text-base flex items-center gap-2">
+                      <FiFileText /> View Resume
+                    </a>
+                    <a href={getResumeDownloadUrl(about.resumeUrl)} download="Jasmin_Paito_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-secondary text-base flex items-center gap-2 bg-white/[0.05] border-white/10 hover:bg-emerald hover:border-emerald hover:text-white">
+                      <FiFileText /> Download
+                    </a>
+                  </>
                 )}
               </div>
 
